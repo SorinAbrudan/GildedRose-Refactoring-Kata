@@ -42,6 +42,18 @@ public class Item {
         quality = 0;
     }
 
+    public boolean underMaxQualityThreshold() {
+        return quality() < 50;
+    }
+
+    public boolean aboveMinQualityThreshold() {
+        return quality() > 0;
+    }
+
+    public boolean aboveMinSellInnThreshold() {
+        return sellIn() > 0;
+    }
+
     @Override
    public String toString() {
         return this.name + ", " + this.sellIn + ", " + this.quality;
